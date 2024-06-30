@@ -13,7 +13,7 @@ class Pojo{
 }
 
 class JavaBean implements Serializable{
-	//1. public no-arg. constructor
+	//1. public no-arg. constructor/ optional
 	public JavaBean() {
 		
 	}

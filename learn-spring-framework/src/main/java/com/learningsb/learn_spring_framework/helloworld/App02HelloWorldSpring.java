@@ -13,7 +13,7 @@ public class App02HelloWorldSpring {
 
 	public static void main(String[] args) {
 //		1.  Launch a Spring Context
-		var context= new AnnotationConfigApplicationContext(HelloWorldConfiguration.class);
+		try(var context= new AnnotationConfigApplicationContext(HelloWorldConfiguration.class)){
 		
 //		2 .Configure the things that we want to Spring to manage - @Configuration
 		// HelloWorldConfiguration class - @Configuration
@@ -36,6 +36,8 @@ public class App02HelloWorldSpring {
 		System.out.println(context.getBean("person4Qualifier"));
 		
 		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		
+		}
 	}
 
 }
